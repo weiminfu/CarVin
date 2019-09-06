@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    nav ul i{
+        border: 8px solid #666;
+        position: absolute;
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        top:10px;
+    }
+    nav ul i.act{
+        transform: rotate(180deg);
+        top:5px;
+    }
+</style>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="#" id="nav-btn">投资者关系<i></i></a>
+            <ol id="nav">
+                <li>企业年报</li>
+                <li>财务报表</li>
+                <li>企业年报</li>
+                <li>经营状况</li>
+            </ol>
+        </li>
+    </ul>
+</nav>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#nav-btn").click(function(){
+            $("#nav").slideToggle("slow");
+//            $("#nav-btn").children("i").addClass("act");/*只能添加类*/
+            $("#nav-btn").children("i").toggleClass("act");/*能添加或删除类*/
+        });
+    });
+</script>
+</html>

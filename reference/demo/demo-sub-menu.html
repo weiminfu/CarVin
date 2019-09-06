@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body{font-size:14px;}
+        ul{margin:0;padding:0;list-style:none;}
+        a{text-decoration:none;color:#000;}
+        #wrap{position:relative;top:0px;width:876px;height:34px;line-height:34px;margin:0 auto;}
+        ul#menu li{float:left;display:block;width:92px;height:37px;line-height:37px;text-align:center;margin-right:2px;}
+        ul#menu li a:link{display:block;background:#EDEBEC;font-size:14px;color:#333;width:92px;height:37px;line-height:37px;}
+        ul#menu li a:hover,.red{background:#CE070E!important;color:#FFF!important;}
+        /*子菜单*/
+        ul#menu li ul{position:absolute;top:37px;width:90px;display:none;border:1px #CE070E solid;border-top:none;background:#FFF;}
+        ul#menu li ul li{float:left;}
+        ul#menu li ul li a:link{width:90px;height:37px;line-height:37px;background:#FFF;}
+        ul#menu li ul li a:hover{color:#CE070E;text-decoration:underline}
+        ul#menu li ul li{width:90px;height:37px;line-height:37px;float:left;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!--<script type="text/javascript" src="jquery-1.6.2.min.js"></script>-->
+    <script type="text/javascript" language="javascript">
+        $(function(){
+            $("ul#menu>li:has(ul)").hover(
+                    function(){
+                        $(this).children('a').addClass('red').end().find('ul').fadeIn(400);
+                    },
+                    function(){
+                        $(this).children('a').removeClass('red').end().find('ul').fadeOut(400);
+                    }
+            );
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <ul id="menu">
+        <li><a href="#" >网站首页</a></li>
+        <li><a href="#" >最新动态页</a>
+            <ul>
+                <li><a href="#">源码爱好者</a></li>
+                <li><a href="#">编程导航</a></li>
+                <li><a href="#">网页特效</a></li>
+            </ul>
+        </li>
+        <li><a href="#" >产品预定</a></li>
+        <li><a href="#" >帮助查询</a>
+            <ul>
+                <li><a href="#">时速快递</a> | </li>
+                <li><a href="#">太空一号</a> | </li>
+                <li><a href="#">蜘蛛侠前传</a> | </li>
+                <li><a href="#">未来战士</a> | </li>
+                <li><a href="#">蟒蛇之灾</a></li>
+            </ul>
+        </li>
+        <li><a href="#" >会员俱乐部</a></li>
+        <li><a href="#" >凯撒论坛</a></li>
+    </ul>
+</div>
+</body>
+</html>

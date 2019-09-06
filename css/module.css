@@ -1,0 +1,199 @@
+@charset"UTF-8";/*避免用中文时出现乱码*/
+
+/*---------------模块式组件----------------*/
+/*-----info css----------------------------*/
+.md-info{
+    background-color: rgba(85,85,85,1);
+    color: rgba(255,255,255,1);
+}
+.md-info>div>div>a{font-size: 0.75rem;}
+.md-info>div>div>a>i{margin-left: 1vw;}
+.md-info>div>div>a>i:nth-of-type(1){margin-left: 0;}
+/*-----------nav css--------------------------*/
+.md-nav {
+    position: relative;
+    z-index: 9999;
+    margin-bottom: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.md-nav a{
+    padding: 0 1.5rem;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.md-nav a.logo img{
+    margin: 1rem 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.md-nav a.logo:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+.md-nav>nav>ul>li{
+    margin: 1rem auto;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.md-nav>nav>ul>li:last-child a{
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin-right: 0;
+}
+.md-nav>nav>ul>li:last-child a img{
+    margin-right: 0.3rem;
+}
+.md-nav>nav>ul>li.nav-sub{
+    position: relative;
+}
+.md-nav>nav>ul>li.nav-sub ol{
+    width: 100%;
+    position: absolute;
+    top: 2rem;
+    display: none;
+    background-color: rgba(255,255,255,1);
+}
+.md-nav>nav>ul>li.nav-sub ol a{
+    display: block;
+    width:100%;
+    padding: 0;
+}
+.md-nav>nav>ul>li.nav-sub ol a{
+    border-radius: 0;
+}
+.md-nav>nav>ul>li.nav-sub a i{
+    display: inline-block;
+    margin-left: 0.2rem;
+}
+.md-nav>nav>ul>li.nav-sub a i.up{
+    transform: rotate(180deg);
+    top:5px;
+}
+.md-nav>nav>ul>li:last-of-type>a{background: linear-gradient(45deg,rgba(103,120,226,1),rgba(116,80,169,1)); }
+/*-----------contact css-------------------------*/
+.contact p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/*-----------footer css--------------------------*/
+.md-footer{
+    background: url(../img/bg/footer-green.png) repeat-x left top/auto 6vh,url(../img/bg/texture-dark.png)repeat-x left 5vh/auto;
+    padding: 6vh;
+}
+.md-footer p{
+    font-size: 0.8rem;
+
+}
+.md-footer>div>a{
+    display: block;
+    line-height: 1rem;
+    width: 100%;
+}
+.md-footer>div>div>a>i{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 1vw;
+}
+/*-----------banner css--------------------------*/
+.md-banner{
+    height: 8rem;
+}
+.md-banner h2{
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+}
+.md-banner input{
+    display: block;
+    width: 45vw;
+    margin: 0 auto;
+    line-height:2;
+    /*background: rgba(255,255,255,1) url(../img/ico/ico-house-yellow.png) no-repeat 2px 3px/24px;*/
+    padding-left: 28px;
+    /*border: 1px rgba(255,170,24,1);*/
+    border-width: 1px;
+    border-style: solid;
+    /*color:rgba(255,170,24,1);*/
+    border-radius: 0.25rem;
+}
+@media all and (max-width:868px) {
+    .container{width: 80vw;}
+    .md-banner input{width: 80vw;}
+}
+/*---------------------------------------------------*/
+/*--便签式组件--*/
+.md-note{
+    border: 1px solid rgba(223,223,223,1);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+.md-note h3{
+    font-size: 1rem;
+}
+.md-note p{
+    font-size: 0.75rem;
+}
+/*---------------------------------------------------*/
+/*--功能式组件--*/
+.md-tips{
+    display: block;
+    width:5%;
+    height: 5%;
+    position: absolute;
+    margin-top: 3%;
+    color: rgba(255,255,255,1)
+}
+.md-btn{
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+}
+
+.md-btn-page div{width: 100%;}
+.md-btn-page a{
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+/*------------------------*/
+.md-back-top{
+    display: none;
+    box-sizing: border-box;
+    z-index: 100;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: white;
+    position: fixed;
+    bottom: 10vh;
+    right: 0.5vw;
+    background-color:  rgba(223,223,223,1);
+    border-radius: 0.5rem;
+}
+/*.md-back-top:visited{
+    background-color:  rgba(223,223,223,1);
+}*/
+.md-back-top:hover{
+    background-color:  rgba(51,51,51,1);
+}
+.md-back-top i{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+
+/*--其他--*/
+.md-slide .swiper-pagination-bullet{
+    width: 20px;
+    height: 8px;
+    border-radius: 4px;
+}
+.md-slide .swiper-pagination-bullet-active {
+    background-color: rgba(255,255,255,1);
+}
+.md-slide .swiper-button-prev{background-image: url("../img/ico/ico-go-left.svg")}
+.md-slide .swiper-button-next{background-image: url("../img/ico/ico-go-right.svg")}
